@@ -1,4 +1,4 @@
-import {TodoDatabase} from "../todo_database/todo_database"
+import { TodoDatabase } from "../todo_database/todo_database"
 
 test("Check todo adding", async () => {
     // Create new database
@@ -7,7 +7,7 @@ test("Check todo adding", async () => {
     // Insert new item to it
     let id = await db.insertTodo("New todoItem");
     // Check if id is auto icremented number
-    expect(typeof(id)).toBe("number");
+    expect(typeof (id)).toBe("number");
     expect(id).toBeGreaterThan(0);
     // Get todo's from db and check if a new item exists
     db.getTodos().then((val) => {
@@ -23,7 +23,7 @@ test("Check todo removing", async () => {
     // Insert new item to it
     let id = await db.insertTodo("New todoItem");
     // Check if id is auto icremented number
-    expect(typeof(id)).toBe("number");
+    expect(typeof (id)).toBe("number");
     expect(id).toBeGreaterThan(0);
     // Delete item from database
     db.deleteTodo(id);

@@ -7,7 +7,7 @@ export class TodoDatabase {
 
     }
 
-    async openDB(dbPath: string){
+    async openDB(dbPath: string) {
         this.db = await open({
             filename: dbPath,
             driver: sqlite3.Database,
@@ -22,7 +22,7 @@ export class TodoDatabase {
     }
 
     async insertTodo(content: string): Promise<number> {
-        let runResult  = await this.db.run(
+        let runResult = await this.db.run(
             "INSERT INTO todo (content) VALUES (?)",
             [content],
         )
@@ -36,11 +36,11 @@ export class TodoDatabase {
         );
     }
 
-    async getTodos(): Promise<{ id: any; content: any; }[]>{
+    async getTodos(): Promise<{ id: any; content: any; }[]> {
         let todoList: { id: any; content: any; }[] = [];
 
         await this.db.each("SELECT * FROM todo;", (e, row) => {
-            todoList.push({id: row["id"], content: row["content"]});
+            todoList.push({ id: row["id"], content: row["content"] });
         });
 
         return todoList;
