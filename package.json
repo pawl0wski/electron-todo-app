@@ -4,13 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tsc tests/*.ts && tsc && jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.1.3",
     "electron": "^16.0.2",
+    "sqlite": "^4.0.23",
     "sqlite3": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/sqlite3": "^3.1.7",
+    "jest": "^27.4.2",
+    "typescript": "^4.5.2"
+  },
+  "jest": {
+    "testMatch": [
+      "**/?(*.)+(spec|test).[j]s?(x)"
+    ]
   }
 }
