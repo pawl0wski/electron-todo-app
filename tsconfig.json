@@ -11,5 +11,6 @@
     },
     "files": [
       "todo_database/todo_database.ts",
+      "main.ts",
     ]
   }

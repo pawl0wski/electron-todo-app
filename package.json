@@ -2,9 +2,11 @@
   "name": "electron-todo-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "tsc tests/*.ts && tsc && jest"
+    "test": "tsc tests/*.ts && tsc && jest",
+    "run": "electron .",
+    "build-and-run": "tsc && electron ."
   },
   "author": "",
   "license": "ISC",
