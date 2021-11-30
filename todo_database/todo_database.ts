@@ -39,7 +39,7 @@ export class TodoDatabase {
     async getTodos(): Promise<{ id: any; content: any; }[]>{
         let todoList: { id: any; content: any; }[] = [];
 
-        await this.db.each("SELECT * FROM todos;", (e, row) => {
+        await this.db.each("SELECT * FROM todo;", (e, row) => {
             todoList.push({id: row["id"], content: row["content"]});
         });
 
