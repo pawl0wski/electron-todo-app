@@ -11,6 +11,10 @@
     },
     "files": [
       "todo_database/todo_database.ts",
+      "main_window_signals/main_window_signals.ts",
       "main.ts",
+
+      // MainWindow TypeScript files
+      "html/js/index.ts",
     ]
   }
