@@ -21,8 +21,8 @@ export class MainWindowSignals {
             await this.refreshTodo();
         });
 
-        ipcMain.on("delete-todo", async (event, todo) => {
-            this.todoDatabase.deleteTodo(todo);
+        ipcMain.on("delete-todo", async (event, todoId) => {
+            this.todoDatabase.deleteTodo(todoId);
             await this.refreshTodo();
         })
     }
