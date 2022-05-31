@@ -3,9 +3,6 @@ import * as sqlite3 from "sqlite3";
 
 export class TodoDatabase {
     db: Database;
-    constructor() {
-
-    }
 
     async openDB(dbPath: string) {
         this.db = await open({

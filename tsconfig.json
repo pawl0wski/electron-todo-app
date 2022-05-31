@@ -10,8 +10,8 @@
       "sourceMap": false,
     },
     "files": [
-      "todo_database/todo_database.ts",
-      "main_window_signals/main_window_signals.ts",
+      "database/todoDatabase.ts",
+      "mainWindowSignals/mainWindowSignals.ts",
       "main.ts",
 
       // MainWindow TypeScript files

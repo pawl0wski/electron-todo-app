@@ -9,7 +9,7 @@ function attachElementsToIpcEvents() {
     });
 }
 
-function reciveIpcEvents() {
+function receiveIpcEvents() {
     let todoList : { id: any; content: any; }[] = [];
     ipcRenderer.on("refresh-todo", (event, todoRecive: string) => {
         todoList = JSON.parse(todoRecive);
@@ -30,6 +30,6 @@ function reciveIpcEvents() {
 
 window.onload = () => {
     attachElementsToIpcEvents();
-    reciveIpcEvents();
+    receiveIpcEvents();
 }
 

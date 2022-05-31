@@ -1,6 +1,6 @@
-import { TodoDatabase } from "../todo_database/todo_database"
+import {TodoDatabase} from "../../database/todoDatabase";
 
-test("Check todo adding", async () => {
+test("Should be able to insert todo", async () => {
     // Create new database
     let db = new TodoDatabase();
     await db.openDB(":memory:")
@@ -16,7 +16,7 @@ test("Check todo adding", async () => {
     });
 })
 
-test("Check todo removing", async () => {
+test("Should be able to delete inserted todo", async () => {
     // Create new database
     let db = new TodoDatabase();
     await db.openDB(":memory:");

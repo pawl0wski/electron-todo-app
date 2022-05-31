@@ -1,5 +1,5 @@
 import { BrowserWindow, ipcMain } from "electron";
-import { TodoDatabase } from "../todo_database/todo_database";
+import {TodoDatabase} from "../database/todoDatabase";
 
 export class MainWindowSignals {
     window: BrowserWindow;
@@ -15,7 +15,7 @@ export class MainWindowSignals {
         this.window.webContents.send("refresh-todo", JSON.stringify(todoList));
     }
 
-    reciveSignals() {
+    receiveSignals() {
         ipcMain.on("add-todo", async (event, todo) => {
             await this.todoDatabase.insertTodo(todo);
             await this.refreshTodo();
